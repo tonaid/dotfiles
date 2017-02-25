@@ -94,11 +94,11 @@ set $ws1 "1 "
 set $ws2 "2 "
 set $ws3 "3 "
 set $ws4 "4 "
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws5 "5 "
+set $ws6 "6 "
+set $ws7 "7 "
+set $ws8 "8 "
+set $ws9 "9 "
 set $ws10 "10 "
 
 # switch to workspace
@@ -194,12 +194,11 @@ bar {
 }
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume 0 toggle
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset 'Master' 5%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset 'Master' 5%-
+bindsym XF86AudioMute exec exec amixer -D pulse sset 'Master' 0%
 
 exec compton
 exec thunar
 exec chromium
-exec spotify
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
