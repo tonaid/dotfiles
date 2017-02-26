@@ -117,5 +117,5 @@ eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
 force_color_prompt=yes
 export PS1="\[$(tput bold)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]: \[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
-alias lock='~/.i3/lock.sh ~/Pictures/Icons/lock.png'
+alias lock='~/.i3/lock.sh'
 screenfetch

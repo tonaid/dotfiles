@@ -78,7 +78,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# workspace vars
+# workspace vars fort awesome font cheatsheet
 set $ws1 "1 "
 set $ws2 "2 "
 set $ws3 "3 "
@@ -187,7 +187,7 @@ bindsym XF86AudioRaiseVolume exec amixer -D pulse sset 'Master' 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset 'Master' 5%-
 bindsym XF86AudioMute exec exec amixer -D pulse sset 'Master' 0%
 
-bindsym $mod+l exec ~/.i3/lock.sh ~/Pictures/Icons/lock.png
+bindsym $mod+l exec ~/.i3/lock.sh
 
 exec --no-startup-id compton
 exec --no-startup-id thunar
