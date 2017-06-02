@@ -14,6 +14,7 @@ alias lock='~/.i3/lock.sh'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias shutdown='shutdown -P 0'
+alias rlogin='ssh tonaid@portal.cs.vt.edu'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 ##
 
