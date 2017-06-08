@@ -1,5 +1,5 @@
 urxvt*transparent:true
-urxvt*shading: 9
+urxvt*shading: 7
 urxvt*scrollBar:false
 urxvt*font:xft:Dejavu Sans Mono:size=11
 urxvt*letterSpace: -1
@@ -12,78 +12,38 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 ! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
+*.foreground:   #cfcfc2
+*.background:   #232629
+*.cursorColor:  #cfcfc2
 
 ! black
-*.color0:       #393939
-*.color8:       #373b41
+*.color0:       #2a2e32
+*.color8:       #31363b
 
 ! red
-*.color1:       #f41e1e
-*.color9:       #ff5656
+*.color1:       #c0392b
+*.color9:       #f44f4f
 
 ! green
-*.color2:       #553f30
-*.color10:      #fc9c5a
+*.color2:       #218058
+*.color10:      #27ae60
 
 ! yellow
-*.color3:       #73563d
-*.color11:      #ff8012
+*.color3:       #fdbc4b
+*.color11:      #fdbc4b
 
 ! blue
-*.color4:       #b8bcb4
-*.color12:      #e4ffca
+*.color4:       #2980b9
+*.color12:      #0099ff
 
 ! magenta
-*.color5:       #5d6661
-*.color13:      #9ab0a4
+*.color5:       #8e44ad
+*.color13:      #af81ff
 
 ! cyan
-*.color6:       #5e8d87
-*.color14:      #8abeb7
+*.color6:       #27aeae
+*.color14:      #31dddd
 
 ! white
-*.color7:       #707880
-*.color15:      #c5c8c6
-
-
-/*
-! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
-
-! black
-*.color0:       #282a2e
-*.color8:       #373b41
-
-! red
-*.color1:       #a54242
-*.color9:       #cc6666
-
-! green
-*.color2:       #8C9440
-*.color10:      #B5BD68
-
-! yellow
-*.color3:       #523b2e
-*.color11:      #75553b
-
-! blue
-*.color4:       #4771BA
-*.color12:      #5CACEF
-/*
-! magenta
-*.color5:       #85678F
-*.color13:      #AA73BB
-
-! cyan
-*.color6:       #5e8d87
-*.color14:      #8abeb7
-
-! white
-*.color7:       #b3b7bc
-*.color15:      #c5c8c6
-*/
+*.color7:       #acada1
+*.color15:      #cfd0c2
