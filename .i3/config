@@ -5,10 +5,10 @@ set $mod Mod4
 font pango:System San Francisco Display 9
 
 # Windows #
-new_window pixel 2
+new_window pixel 0
 
 # Floats #
-new_float pixel 2
+new_float pixel 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -66,9 +66,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace vars fort awesome font cheatsheet
-set $ws1 "1 "
+set $ws1 "1 "
 set $ws2 "2 "
-set $ws3 "3 "
+set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
 set $ws6 "6 "
@@ -149,9 +149,10 @@ hide_edge_borders both
 # window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -161,12 +162,12 @@ bar {
         background $bg-color
             separator #757575
         #                  border             background         text
-        focused_workspace  $bg-color          $bg-color          $text-color
+        focused_workspace  $bg-color          $bg-color          #f44f4f
         inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
         urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-    }    
+    }
     #status_command i3status
-    position bottom
+    position top
 }
 
 # Pulse Audio controls
@@ -177,7 +178,4 @@ bindsym XF86AudioMute exec exec amixer -D pulse sset 'Master' 0%
 bindsym $mod+l exec ~/.i3/lock.sh
 
 #exec --no-startup-id compton
-exec --no-startup-id thunar
-exec --no-startup-id chromium
-exec_always /home/tonaid/.setbg
-exec --no-startup-id i3-msg workspace $ws2
+exec_always feh --bg-scale /home/tonaid/Pictures/wallpaper/16.jpg
