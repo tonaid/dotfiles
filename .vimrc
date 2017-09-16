@@ -3,6 +3,7 @@ set list listchars=tab:->,trail:.,extends:>
 set shiftwidth=4
 set expandtab
 set number
+set relativenumber
 colo torte
 syntax on
 set statusline+=%F
