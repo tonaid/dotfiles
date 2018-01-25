@@ -1,5 +1,3 @@
-urxvt*transparent:true
-urxvt*shading: 7
 urxvt*scrollBar:false
 urxvt*font:xft:Dejavu Sans Mono:size=11
 urxvt*letterSpace: -1
@@ -47,3 +45,4 @@ Xft.rgba: rgb
 ! white
 *.color7:       #dddddd
 *.color15:      #dddddd
+

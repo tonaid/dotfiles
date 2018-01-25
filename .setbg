@@ -1,4 +1,0 @@
-#!/bin/sh
-list=(/home/tonaid/Pictures/wallpaper/*)
-
-feh  --bg-scale ${list[$(($RANDOM % ${#list[@]}))]}
