@@ -1,6 +1,6 @@
 urxvt*scrollBar:false
-urxvt*font:xft:Dejavu Sans Mono:size=11
-urxvt*letterSpace: -1
+urxvt*font:xft:Ubuntu Mono:size=12
+urxvt*letterSpace: 0
 
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
@@ -31,8 +31,8 @@ Xft.rgba: rgb
 *.color11:      #ff8c00
 
 ! blue
-*.color4:       #008aff
-*.color12:      #008aff
+*.color4:       #0075EE
+*.color12:      #0075EE
 
 ! magenta
 *.color5:       #ff00fd

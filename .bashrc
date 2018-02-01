@@ -9,20 +9,18 @@ case $- in
 esac
 
 # my stuffs
-export PS1="\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]@\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;7m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;7m\]\\$\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[\033[38;5;4m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]@\h \W \\$ \[$(tput sgr0)\]"
 alias lock='~/.i3/lock.sh'
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -al'
 alias grep='grep --color=auto'
 alias shutdown='shutdown -P 0'
-alias shitdown='shutdown -P 0'
-alias suspend='systemctl suspend'
 alias rlogin='ssh tonaid@portal.cs.vt.edu'
-alias irc='ssh root@jewslove.me'
 alias par='ssh tonaid@163.172.177.113'
 alias ams='ssh tonaid@51.15.42.104'
-alias desk='ssh tonaid@10.8.0.6'
+alias irc='ssh root@jewslove.me'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export EDITOR=vim
 ##
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -57,4 +55,3 @@ if ! shopt -oq posix; then
 fi
 
 eval "`dircolors`"
-export EDITOR=vim

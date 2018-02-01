@@ -2,19 +2,19 @@
 set $mod Mod4
 
 # Set font #
-font pango:System San Francisco Display 9
+font pango:Ubuntu Regular 11
 
 # Windows #
-new_window pixel 0
+new_window pixel 2
 
 # Floats #
-new_float pixel 0
+new_float pixel 2
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -66,10 +66,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace vars fort awesome font cheatsheet
-set $ws1 "1 "
-set $ws2 "2 "
+set $ws1 "1 "
+set $ws2 "2 "
 set $ws3 "3 "
-set $ws4 "4 "
+set $ws4 "4 "
 set $ws5 "5 "
 set $ws6 "6 "
 set $ws7 "7 "
@@ -101,16 +101,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class="Chromium"] $ws1
+assign [class="Firefox"] $ws2
+assign [class="Google-chrome"] $ws1
 assign [class="Spotify"] $ws10
-assign [class="Thunar"] $ws3
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -142,17 +138,16 @@ set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $urgent-bg-color     #2f343f
+set $border-color        #0075EE
 
-hide_edge_borders both
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
-
+#                       border              background          text                    indicator
+client.focused          $border-color       $border-color           $text-color             #f3f4f5
+client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #f3f4f5
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #f3f4f5
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color             #00ff00
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -162,10 +157,10 @@ bar {
         background $bg-color
             separator #757575
         #                  border             background         text
-        focused_workspace  $bg-color          $bg-color          #f44f4f
+        focused_workspace  $bg-color          $bg-color          #0075EE
         inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
         urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-    }
+    }    
     #status_command i3status
     position top
 }
@@ -178,4 +173,9 @@ bindsym XF86AudioMute exec exec amixer -D pulse sset 'Master' 0%
 bindsym $mod+l exec ~/.i3/lock.sh
 
 #exec --no-startup-id compton
-exec_always feh --bg-scale /home/tonaid/Pictures/wallpaper/16.jpg
+#exec --no-startup-id thunar
+exec --no-startup-id firefox
+exec --no-startup-id google-chrome
+exec --no-startup-id spotify
+#exec_always feh --bg-scale ~/wallpaper.jpg
+#exec --no-startup-id i3-msg workspace $ws2
